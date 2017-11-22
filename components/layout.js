@@ -27,7 +27,7 @@ class Layout extends Component {
         return (
             <div className="layout">
 
-                <h1>APP</h1>
+                <h1>SSR App</h1>
 
                 <hr />
 
