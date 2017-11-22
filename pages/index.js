@@ -3,12 +3,16 @@ import 'isomorphic-unfetch'
 
 
 import Navigation from '../components/navigation'
+import { setTimeout } from 'timers';
 
 class IndexPage extends Component {
 
     static async getInitialProps() {
         // eslint-disable-next-line no-undef
-        const res = await fetch('https://api.github.com/repos/developit/preact')
+        const res = await fetch('https://api.github.com/repos/developit/preact').then(data => {
+            // console.log(data)
+            return data
+        })
         const json = await res.json()
         return { stars: json.stargazers_count }
     }
