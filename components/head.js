@@ -7,6 +7,7 @@ export default () => (
         <meta charSet='utf-8' />
         <meta name='viewport' content='initial-scale=1.0, width=device-width' />
         <link rel="manifest" href="/static/manifest.webmanifest" />
+        <meta name="theme-color" content="#512DA8"/>
         
     </Head>
   

@@ -1,6 +1,6 @@
 import { Component } from 'react'
 
-import Navigation from '../components/navigation'
+import Layout from '../components/layout'
 
 class TestPage extends Component {
 
@@ -18,11 +18,11 @@ class TestPage extends Component {
         const { title } = this.props
 
         return (
-            <div>
-                <Navigation />
+            <Layout>
+                
                 <h1>{title}</h1>
 
-            </div>
+            </Layout>
         )
     }
 

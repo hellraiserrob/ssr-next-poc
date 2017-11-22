@@ -2,8 +2,9 @@ import { Component } from 'react'
 import 'isomorphic-unfetch'
 
 
-import Navigation from '../components/navigation'
+
 // import { setTimeout } from 'timers';
+import Layout from '../components/layout'
 
 
 class IndexPage extends Component {
@@ -41,15 +42,15 @@ class IndexPage extends Component {
         const { stars } = this.props
 
         return (
-            <div>
-                <Navigation />
+            <Layout>
+                
                 <h1>{title}</h1>
                 <button onClick={this.change}>Change</button>
 
                 <div>
                     Stars: {stars}
                 </div>
-            </div>
+            </Layout>
         )
     }
 
