@@ -1,0 +1,14 @@
+{
+    "name": "next-poc",
+    "short_name": "next-poc",
+    "start_url": ".",
+    "display": "standalone",
+    "background_color": "#ccc",
+    "theme_color": "#512DA8", 
+    "description": "A simple SSR PoC.",
+    "icons": [{
+        "src": "/static/icon.png",
+        "sizes": "192x192",
+        "type": "image/png"
+      }]
+}

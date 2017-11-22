@@ -3,7 +3,8 @@ import 'isomorphic-unfetch'
 
 
 import Navigation from '../components/navigation'
-import { setTimeout } from 'timers';
+// import { setTimeout } from 'timers';
+
 
 class IndexPage extends Component {
 

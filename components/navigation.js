@@ -2,7 +2,7 @@ import { Component } from 'react'
 import Link from 'next/link'
 import Router from 'next/router'
 
-
+import Head  from './head'
 
 class Navigation extends Component {
 
@@ -56,6 +56,8 @@ class Navigation extends Component {
         return (
             <header>
 
+                <Head />
+
                 <style jsx>{`
                     header {
                         
@@ -97,7 +99,7 @@ class Navigation extends Component {
                 <nav>
                     <ul>
                         <li>
-                            <Link href="/">
+                            <Link href="/" prefetch>
                                 <a>Index</a>
                             </Link>
                         </li>
