@@ -1,7 +1,7 @@
 {
     "name": "next-poc",
     "short_name": "next-poc",
-    "start_url": ".",
+    "start_url": "/",
     "display": "standalone",
     "background_color": "#ccc",
     "theme_color": "#512DA8", 
