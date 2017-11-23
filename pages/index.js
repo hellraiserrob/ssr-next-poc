@@ -19,6 +19,21 @@ class IndexPage extends Component {
         return { stars: json.stargazers_count }
     }
 
+    componentDidMount() {
+
+        console.log('componentDidMount')
+
+        if ("serviceWorker" in navigator) {
+            navigator.serviceWorker.register("/sw.js")
+                .catch(err => {
+                    console.error("Service worker registration failed", err)
+                });
+
+        } else {
+            console.log("Service worker not supported");
+        }
+    }
+
     constructor(props) {
 
         super(props)
@@ -43,7 +58,7 @@ class IndexPage extends Component {
 
         return (
             <Layout>
-                
+
                 <h1>{title}</h1>
                 <button onClick={this.change}>Change</button>
 
