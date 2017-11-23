@@ -27,26 +27,34 @@ class Navigation extends Component {
 
         this.changeStart = this.changeStart.bind(this)
         this.changeComplete = this.changeComplete.bind(this)
+        this.changeError = this.changeError.bind(this)
+        this.fin = this.fin.bind(this)
      
         Router.onRouteChangeStart = this.changeStart
         Router.onRouteChangeComplete = this.changeComplete
-        Router.onRouteChangeError = this.changeComplete
+        Router.onRouteChangeError = this.changeError
 
 
     }
 
     changeStart(url){
         console.log(`logged ${url}`)
-        this.setState({
-            isLoading: true
-        })
+        this.fin(true)
     }
  
     changeComplete(){
-        console.log('change complete/error')
-        this.setState({
-            isLoading: false
-        })
+        console.log('change complete')
+        this.fin(false)
+    }
+    
+    changeError(err, url){
+        console.log(`change error to ${url}`)
+        console.log(err)
+        this.fin(false)
+    }
+
+    fin(isLoading){
+        this.setState({isLoading})
     }
 
     render() {
@@ -106,6 +114,11 @@ class Navigation extends Component {
                         <li>
                             <Link href="/test" prefetch>
                                 <a>Test</a>
+                            </Link>
+                        </li>
+                        <li>
+                            <Link href="/another">
+                                <a>Another</a>
                             </Link>
                         </li>
                     </ul>
