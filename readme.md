@@ -1,4 +1,4 @@
-# Next.js proof of concept
+# PWA & SSR PoC
 
 A proof of concept showing:
 
